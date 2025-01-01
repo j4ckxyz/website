@@ -3,41 +3,40 @@
 
 <head> <!--A head contains information for the browser, like setting tab titles or linking CSS files. This is not visible for the user.-->
     <meta charset="UTF-8">
-    <title>Matthew Brewer</title> <!--Sets the websites title, which is visible in the tab-->
+    <title>jack</title> <!--Sets the websites title, which is visible in the tab-->
     <link rel="stylesheet" href="/src/styles/styles.css"> <!--Links a file, in this case, as CSS file which will be used as a stylesheet-->
     <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--Set the viewport (screen) to 1x scale-->
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="apple-touch-icon" href="/src/images/pwa/apple-touch-icon.png">
+    <link rel="profile-picture" href="/src/images/pwa/profile-pic.png">
 </head>
 
 <body> <!--A body is the actual content of the site. Anything here will be visible for the end user-->
     <header> <!--Headers have buttons, navigations, icons and similar. If you plan to add multiple pages, link them here-->
-        <h1>Hey there, I'm Matthew.</h1>
+        <h1>hey! i'm jack</h1>
     </header>
     <main> <!--Main contains the main content a person is looking for-->
-        <img src="/src/images/JetLagOutdoorPortrait.jpg" alt="A photo of Matthew Brewer outside, up against a tree, wearing a blue hoodie and black t-shirt underneath a navy and red vest, and a blue and orange hat with a colored Jet Lag: The Game logo. The background is blurred, and Matthew's glasses are tinted." width="350" height="450">
-        <p>It's great to meet you. From a young age, I've always had a passion for writing, technology, the outdoors, and public speaking. Some around me growing up have said I'd be a fantastic lawyer or politician. But I've been more interested in the hospitality and service industries, which I developed a fascination for traveling the country with my family when I was younger. I'm aiming to become part of the next generation of receptionists, and maybe one day, I'll be greeting you from the opposite side of the front desk. Besides that, I spend a great amount of time on the world's stage of social media, and I enjoy the occasional dabble into various other interests of mine, including voice work, particularly announcements, with an interest in radio DJing.</p>
+        <p>welcome to my website! thanks for being here :D - you can find my socials below or contact me via email 📬️</p>
         <div>
-            <a href="mailto:brewer@thebrewergame.com" target="_blank" rel="noopener">Say hi, or get in touch via email</a>
-            <button type=button id="emailButton" class="emailButton" onclick="copyEmail()" title="Copy email address"><img src="/src/images/icons/copy.png" id="emailButtonIcon" alt="Black copy icon" width="24" height="24"></button>
+            <a href="mailto:jack@jglypt.net" target="_blank" rel="noopener">get in touch via email</a>
+            <button type=button id="emailButton" class="emailButton" onclick="copyEmail()" title="Copy email address"><img src="/src/images/icons/copy.png" id="emailButtonIcon" alt="Grey copy icon" width="24" height="24"></button>
         </div>
     </main>
     <footer> <!--Footers contains links too, but they're at the bottom of all content-->
         <br>
         <h4>Find me elsewhere across the internet:</h4>
         <div> <!--Put the links in a separate container, that way we can align them in a row. Target=_blank rel noopener opens the link in a new tab.-->
-            <a href="https://writingsof.matthewcbrewer.com" target="_blank" rel="noopener">The Writings of Matthew Brewer</a>
-            <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
-            <a href="https://bsky.app/profile/thebrewergame.com" target="_blank" rel="noopener">Bluesky</a>
+            <a href="https://bsky.app/profile/jglypt.net" target="_blank" rel="noopener">bluesky</a>
+            <a href="https://x.com/jglypt" target="_blank" rel="noopener">twitter</a>
+            <a href="https://t.me/j4ckxyz" target="_blank" rel="noopener">telegram</a>
         </div>
         <br>
-        <div class="announcementBanner" id="announcementBanner">
+       <!--  <div class="announcementBanner" id="announcementBanner">
             <h5 id="announcementTagline">THE WRITINGS OF MATTHEW BREWER</h5>
             <h2 id="announcementHeader">I've made the plunge away from Gmail</h2>
             <p id="announcementContent" class="announcementContent">I've made the plunge away from Gmail to HEY, the email platform that aims to give you back control of your inbox. My experience so far, in the second installment of my new blog. Happy New Year!</p>
             <div id="announcementActions">
                 <a href="https://writingsof.matthewcbrewer.com/p/plunge-to-hey" target="_blank" rel="noopener">Read now</a>
-                <button type=button id="announcementDismissButton" class="announcementDismissButton" onclick="dismissAnnouncement()" title="Dismiss announcement"><img src="/src/images/icons/close.png" alt="Black close icon" width="24" height="24"></button>
+                <button type=button id="announcementDismissButton" class="announcementDismissButton" onclick="dismissAnnouncement()" title="Dismiss announcement"><img src="/src/images/icons/close.png" alt="Black close icon" width="24" height="24"></button> -->
             </div>
         </div>
     </footer>
@@ -48,12 +47,12 @@
 <script>
 
 function copyEmail() {
-    var emailButtonAddress = "brewer@thebrewergame.com"
+    var emailButtonAddress = "jack@jglypt.net"
     var emailButtonIcon = document.getElementById("emailButtonIcon")
     var emailButtonCopyIcon = "/src/images/icons/copy.png"
-    var emailButtonCopyIconAltText = "Black copy icon"
+    var emailButtonCopyIconAltText = "Grey copy icon"
     var emailButtonCheckIcon = "/src/images/icons/check.png"
-    var emailButtonCheckIconAltText = "Black checkmark icon"
+    var emailButtonCheckIconAltText = "Grey checkmark icon"
 
     navigator.clipboard.writeText(emailButtonAddress);
     emailButtonIcon.src = emailButtonCheckIcon
@@ -64,14 +63,13 @@ function copyEmail() {
     }, 2000)
 }
 
-function dismissAnnouncement() {
+// function dismissAnnouncement() {
     var announcementBanner = document.getElementById("announcementBanner")
     if (announcementBanner.style.display === "none") {
         announcementBanner.style.display = "block"
     } else {
         announcementBanner.style.display = "none"
-    }
-}
+    } 
 
 </script>
 
