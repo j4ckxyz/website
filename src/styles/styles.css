@@ -1,17 +1,139 @@
 @font-face { /*Import a font from a file.*/
-    font-family: RobotoMono; /*Refer to the font as Jost*/
+    font-family: RobotoMono; /*Refer to the font as RobotoMono*/
     src: url(/src/styles/fonts/RobotoMono-VariableFont_wght.ttf); /*Get the font from here*/
 }
 
 html, body{
-    background-color: rgb(31, 31, 31); /*Sets the background color of the website*/
-    font-family: Jost, sans-serif; /*Sets the whole site so use the font Jost, if it can't find it, it'll use a sans-serif font proivded by the browser instead*/
-    color: rgb(0, 0, 0); /*Set the text color of the website to black*/
+    background-color: rgb(10, 10, 10); /*Dark background inspired by the banner*/
+    font-family: RobotoMono, sans-serif; /*Sets the whole site to use the font RobotoMono*/
+    color: rgb(240, 240, 240); /*Light text for readability*/
 }
 
 h1{
     text-align: center; /*Use center aligned text*/
     font-weight: 600; /*Make the text bold*/
+    color: rgb(255, 255, 255); /*Ensure headers stand out*/
+}
+
+h2 {
+    margin: 0; /* Remove the default margin around h2 */
+    text-align: center; /* Make sure the text is centered */
+}
+
+main>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*Tells the browser to wrap the content*/
+}
+
+.statuslol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    background: #1b1b1b; /* Match the dark theme of the website */
+    color: rgb(240, 240, 240); /* Light text for readability */
+    border-radius: 0.5em;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  }
+  
+  .statuslol_emoji_container {
+    min-width: 94px;
+    flex: 0 0 1em;
+    font-size: 3em;
+    padding-right: 0;
+    color: rgb(240, 240, 240); /* Ensure emoji color matches text */
+  }
+  
+  .statuslol_content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: -0.5em 0 0 0;
+    text-align: left;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    font-family: RobotoMono, sans-serif; /* Ensure consistency with the rest of the site */
+  } 
+
+.profile-picture {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    width: 150px; /* Adjust size */
+    height: 150px; /* Same value as width for a circle */
+    border-radius: 50%; /* Makes it a circle */
+    border: 4px solid #1b1b1b; /* Optional: Adds a border for styling */
+    object-fit: cover; /* Ensures the image scales properly within the circle */
+}
+
+
+.emailButton {
+    color: rgb(240, 240, 240);
+    background-color: #1b1b1b; /*Dark button background*/
+    border-radius: 8px; /*Makes the buttons round*/
+    text-align: center; /*Aligns text to the center*/
+    padding: 8px; /*Add 8 pixels of padding*/
+    margin: 4px; /*Adds 4 pixels of margin*/
+    text-decoration: none; /*Removes the underline from links*/
+    transition: 0.2s linear background-color; /*Add a transition for hover*/
+    border: none;
+    font-family: RobotoMono, sans-serif;
+    font-size: 1em;
+}
+
+.emailButton:hover { 
+    cursor: pointer;
+    background-color: rgb(255, 77, 77); /*Chill red shade for hover*/
+    transition: 0.2s linear all;
+    color: rgb(240, 240, 240);
+}
+
+h4{
+    font-weight: 500; /*Make the text bold*/
+    color: rgb(200, 200, 200);
+}
+
+body{
+    display: flex; /*Set the body element as a flexible container*/
+    align-items: center; /*Align the items towards the center*/
+    justify-content: center; /*Justify the content towards the center*/
+    flex-direction: column; /*Display the items in a column*/
+    width: 50vw; /*Set the width of the site to 50 percent of the screen width*/
+    margin: auto;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro-text {@font-face { /*Import a font from a file.*/
+    font-family: RobotoMono; /*Refer to the font as RobotoMono*/
+    src: url(/src/styles/fonts/RobotoMono-VariableFont_wght.ttf); /*Get the font from here*/
+}
+
+html, body{
+    background-color: rgb(10, 10, 10); /*Dark background inspired by the banner*/
+    font-family: RobotoMono, sans-serif; /*Sets the whole site to use the font RobotoMono*/
+    color: rgb(240, 240, 240); /*Light text for readability*/
+}
+
+h1{
+    text-align: center; /*Use center aligned text*/
+    font-weight: 600; /*Make the text bold*/
+    color: rgb(255, 255, 255); /*Ensure headers stand out*/
 }
 
 main>div {
@@ -31,42 +153,53 @@ button {
 }
 
 .emailButton {
-    color: black;
-    background-color: rgb(182, 36, 36);
+    color: rgb(240, 240, 240);
+    background-color: #1b1b1b; /*Dark button background*/
     border-radius: 8px; /*Makes the buttons round*/
-    text-align: center; /*Aligns text to the ceneter. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
-    padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
-    margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
-    text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
-    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
-    border:none;
+    text-align: center; /*Aligns text to the center*/
+    padding: 8px; /*Add 8 pixels of padding*/
+    margin: 4px; /*Adds 4 pixels of margin*/
+    text-decoration: none; /*Removes the underline from links*/
+    transition: 0.2s linear background-color; /*Add a transition for hover*/
+    border: none;
     font-family: RobotoMono, sans-serif;
     font-size: 1em;
 }
 
 .emailButton:hover { 
-    cursor:pointer;
-    background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
+    cursor: pointer;
+    background-color: rgb(255, 77, 77); /*Chill red shade for hover*/
     transition: 0.2s linear all;
-    color: black;
+    color: rgb(240, 240, 240);
+}
+
+.emailButton:hover {
+    animation: wiggle 0.3s ease-in-out;
+    transform: translateY(-5px); /* Move up a bit */
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
 }
 
 h4{
     font-weight: 500; /*Make the text bold*/
+    color: rgb(200, 200, 200);
 }
 
 body{
-    display: flex; /*Set the body element as a flexable container*/
+    display: flex; /*Set the body element as a flexible container*/
     align-items: center; /*Align the items towards the center*/
-    justify-content: center; /*Justify the content towards the center, as in, horizontal centering*/
+    justify-content: center; /*Justify the content towards the center*/
     flex-direction: column; /*Display the items in a column*/
-    width: 50vw; /*Set the width of the site to 50 percent of the screens width*/
+    width: 50vw; /*Set the width of the site to 50 percent of the screen width*/
     margin: auto;
-
 }
 
 main{
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,26 +224,26 @@ footer>div{ /*Adds styles for the links in the footer*/
 }
 
 a{
-    color: black;
-    background-color: rgb(218, 218, 218);
+    color: rgb(240, 240, 240);
+    background-color: #1b1b1b; /*Dark button background*/
     border-radius: 8px; /*Makes the buttons round*/
-    text-align: center; /*Aligns text to the ceneter. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
-    padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
-    margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
-    text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
-    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
+    text-align: center; /*Aligns text to the center*/
+    padding: 8px; /*Add 8 pixels of padding*/
+    margin: 4px; /*Adds 4 pixels of margin*/
+    text-decoration: none; /*Removes the underline from links*/
+    transition: 0.2s linear background-color; /*Add a transition for hover*/
 }
 
 a:hover{
-    background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
+    background-color: rgb(255, 77, 77); /*Chill red shade for hover*/
     transition: 0.2s linear all;
-    color: black;
+    color: rgb(240, 240, 240);
 }
 
 .announcementBanner {
-  width: 30vw; /*A value of 50 aligns the width with the blurb*/
+  width: 30vw; /*Width aligns with the blurb*/
   height: 23vh;
-  border:none;
+  border: none;
   padding: 8px;
   padding-left: 18px;
   padding-right: 18px;
@@ -124,8 +257,8 @@ a:hover{
   flex-direction: column;
   flex-wrap: wrap; /*Tells the browser to wrap the content*/
   border-radius: 8px;
-  background-color: rgb(237,237,237);
-  /*display: none;*/
+  background-color: rgb(20, 20, 20); /*Slightly lighter than the background*/
+  color: rgb(220, 220, 220); /*Readable text color*/
 }
 
 h2 {
@@ -133,6 +266,7 @@ h2 {
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+    color: rgb(240, 240, 240);
 }
 
 h5 {
@@ -141,6 +275,7 @@ h5 {
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+    color: rgb(200, 200, 200);
 }
 
 .announcementContent {
@@ -157,50 +292,33 @@ h5 {
 }
 
 .announcementDismissButton {
-    color: black;
-    background-color: rgb(218, 218, 218);
+    color: rgb(240, 240, 240);
+    background-color: #1b1b1b; /*Dark button background*/
     border-radius: 8px; /*Makes the buttons round*/
-    text-align: center; /*Aligns text to the ceneter. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
-    padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
-    margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
-    text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
-    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
-    border:none;
+    text-align: center; /*Aligns text to the center*/
+    padding: 8px; /*Add 8 pixels of padding*/
+    margin: 4px; /*Adds 4 pixels of margin*/
+    text-decoration: none; /*Removes the underline from links*/
+    transition: 0.2s linear background-color; /*Add a transition for hover*/
+    border: none;
     font-family: RobotoMono, sans-serif;
     font-size: 1em;
 }
 
 .announcementDismissButton:hover { 
-    cursor:pointer;
-    background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
+    cursor: pointer;
+    background-color: rgb(255, 77, 77); /*Chill red shade for hover*/
     transition: 0.2s linear all;
-    color: black;
+    color: rgb(240, 240, 240);
 }
-
-/*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
-Multiple elemenrs can share the same class name if you'd like to.
-
-However, if you were to use IDs, as in id=(name) in HTML, yoou can't have two ids with the same name on one page. 
-IDs are refered to using hashtags (#) in CSS.
-
-.classname{
-code goes here
-}
-
-#idname{
-code goes here
-}
-
-
-*/
 
 .twitter{
-    background-color: #008AD8;
+    background-color: #1DA1F2;
     color: white;
 }
 
 .instagram{
-    background-color: #F56040;
+    background-color: #E1306C;
     color: white;
 }
 
@@ -224,7 +342,7 @@ code goes here
     color: white;
 }
 
-@media only screen and (max-width: 600px) { /*When the users screen is smaller than 600px (as in, for phones), make the width of the site 80% of the sceeens width*/
+@media only screen and (max-width: 600px) { /*Responsive design for small screens*/
     body {
       width: 80vw;
     }
@@ -242,4 +360,168 @@ code goes here
     .emailButton {
         display: none;
     }
-  }
+}
+
+    width: 80%; /* Scales with the site's width */
+    max-width: 50vw; /* Limits the maximum width to fit larger screens */
+    text-align: center; /* Centers the text horizontally */
+    margin: auto; /* Centers the container within its parent */
+    word-wrap: break-word; /* Ensures long words don't overflow */
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer>div{ /*Adds styles for the links in the footer*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*Tells the browser to wrap the content*/
+}
+
+a{
+    color: rgb(240, 240, 240);
+    background-color: #1b1b1b; /*Dark button background*/
+    border-radius: 8px; /*Makes the buttons round*/
+    text-align: center; /*Aligns text to the center*/
+    padding: 8px; /*Add 8 pixels of padding*/
+    margin: 4px; /*Adds 4 pixels of margin*/
+    text-decoration: none; /*Removes the underline from links*/
+    transition: 0.2s linear background-color; /*Add a transition for hover*/
+}
+
+a:hover{
+    background-color: rgb(255, 77, 77); /*Chill red shade for hover*/
+    transition: 0.2s linear all;
+    color: rgb(240, 240, 240);
+}
+
+.announcementBanner {
+  width: 30vw; /*Width aligns with the blurb*/
+  height: 23vh;
+  border: none;
+  padding: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap; /*Tells the browser to wrap the content*/
+  border-radius: 8px;
+  background-color: rgb(20, 20, 20); /*Slightly lighter than the background*/
+  color: rgb(220, 220, 220); /*Readable text color*/
+}
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: rgb(240, 240, 240);
+}
+
+h5 {
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: rgb(200, 200, 200);
+}
+
+.announcementContent {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.7em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.announcementBanner>div {
+    display: flex;
+}
+
+.announcementDismissButton {
+    color: rgb(240, 240, 240);
+    background-color: #1b1b1b; /*Dark button background*/
+    border-radius: 8px; /*Makes the buttons round*/
+    text-align: center; /*Aligns text to the center*/
+    padding: 8px; /*Add 8 pixels of padding*/
+    margin: 4px; /*Adds 4 pixels of margin*/
+    text-decoration: none; /*Removes the underline from links*/
+    transition: 0.2s linear background-color; /*Add a transition for hover*/
+    border: none;
+    font-family: RobotoMono, sans-serif;
+    font-size: 1em;
+}
+
+.announcementDismissButton:hover { 
+    cursor: pointer;
+    background-color: rgb(255, 77, 77); /*Chill red shade for hover*/
+    transition: 0.2s linear all;
+    color: rgb(240, 240, 240);
+}
+
+.twitter{
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.instagram{
+    background-color: #E1306C;
+    color: white;
+}
+
+.substack{
+    background-color: #FF6719;
+    color: white;
+}
+
+.airchat{
+    background-color: #3170e7;
+    color: white;
+}
+
+.youtube{
+    background-color: #FF0000;
+    color: white;
+}
+
+.twitch{
+    background-color: #6441a5;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) { /*Responsive design for small screens*/
+    body {
+      width: 80vw;
+    }
+
+    .announcementBanner {
+        width: 80vw; /*A value of 80 aligns the width with the blurb*/
+        height: 37vh;
+    }
+
+    .announcementContent {
+        margin-block-start: .3em;
+        margin-block-end: .5em;
+    }
+
+    .emailButton {
+        display: none;
+    }
+}

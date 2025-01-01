@@ -13,17 +13,25 @@
 <body> <!--A body is the actual content of the site. Anything here will be visible for the end user-->
     <header> <!--Headers have buttons, navigations, icons and similar. If you plan to add multiple pages, link them here-->
         <h1>hey! i'm jack</h1>
+        <img src="src/images/pwa/profile-pic.png" alt="Black photo with a white J in the middle." class="profile-picture">
     </header>
-    <main> <!--Main contains the main content a person is looking for-->
-        <p>welcome to my website! thanks for being here :D - you can find my socials below or contact me via email 📬️</p>
+    
+    <main>
+        <div class="intro-text">
+            <p>welcome to my website! thanks for being here :D - you can find my socials below or contact me via email 📬️</p>
+        </div>
         <div>
             <a href="mailto:jack@jglypt.net" target="_blank" rel="noopener">get in touch via email</a>
             <button type=button id="emailButton" class="emailButton" onclick="copyEmail()" title="Copy email address"><img src="/src/images/icons/copy.png" id="emailButtonIcon" alt="Grey copy icon" width="24" height="24"></button>
         </div>
-    </main>
+    </main> 
+    <div class="status-container">
+        <h2>status:</h2>
+        <script src="https://status.lol/jglypt.js?fluent"></script>
+    </div>    
     <footer> <!--Footers contains links too, but they're at the bottom of all content-->
         <br>
-        <h4>Find me elsewhere across the internet:</h4>
+        <h4>find me across the internet!</h4>
         <div> <!--Put the links in a separate container, that way we can align them in a row. Target=_blank rel noopener opens the link in a new tab.-->
             <a href="https://bsky.app/profile/jglypt.net" target="_blank" rel="noopener">bluesky</a>
             <a href="https://x.com/jglypt" target="_blank" rel="noopener">twitter</a>
